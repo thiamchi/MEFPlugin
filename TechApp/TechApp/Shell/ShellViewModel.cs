@@ -10,15 +10,25 @@ using System.ComponentModel.Composition;
 //Caliburn
 using Caliburn.Micro;
 
+using TechApp.Screens;
+using TechApp.Framework;
+
 namespace TechApp.Shell
 {
     [Export(typeof(IShell))]
-    class ShellViewModel : Screen, IShell
+    public class ShellViewModel : Conductor<IScreenSpace>.Collection.OneActive, IShell
     {
         [ImportingConstructor]
-        public ShellViewModel()
+        public ShellViewModel([ImportMany]IEnumerable<IScreenSpace> screenSpaces, IEventAggregator events)
         {
-
+            this.Items.AddRange(screenSpaces);
         }
+
+        protected override void OnViewLoaded(object view)
+        {
+            ActivateItem(Items.First(x => x.ScreenName == ViewName.AlphaView));
+            base.OnViewLoaded(view);
+        }
+
     }
 }

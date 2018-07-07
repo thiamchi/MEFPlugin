@@ -69,6 +69,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Framework\GlobalConst.cs" />
+    <Compile Include="Framework\IRegion.cs" />
+    <Compile Include="Framework\IScreenSpace.cs" />
+    <Compile Include="Screens\AlphaView.xaml.cs">
+      <DependentUpon>AlphaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AlphaViewModel.cs" />
     <Compile Include="Shell\AppBootStrapper.cs" />
     <Compile Include="Shell\IShell.cs" />
     <Compile Include="Shell\ShellView.xaml.cs">
@@ -79,6 +86,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Screens\AlphaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Shell\ShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,6 +127,10 @@
       <Project>{b66d90f2-6217-484e-821b-54612071260f}</Project>
       <Name>PluginContract</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screens\Interface\" />
+    <Folder Include="Screens\Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
