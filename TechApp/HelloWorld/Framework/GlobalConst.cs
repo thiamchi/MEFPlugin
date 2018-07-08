@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloWorld.Shell
+namespace HelloWorld.Framework
 {
-    public interface IShell
+    public enum ViewName
+    {
+        None,
+        Hello,
+    }
+
+    public class GlobalConst
     {
     }
 }

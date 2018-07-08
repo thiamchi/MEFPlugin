@@ -4,15 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TechApp.Framework
+namespace HelloWorld.Framework
 {
-    public enum ViewName
+    public interface IContent
     {
-        None,
-        AlphaView,
-    }
-
-    public class GlobalConst
-    {
+        ViewName ScreenName { get; set; }
     }
 }

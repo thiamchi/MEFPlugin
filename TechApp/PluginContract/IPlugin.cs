@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,26 @@ namespace PluginContract
 {
     public interface IPlugin
     {
-        string PluginName { get;}
+        string PluginName();
         void run();
     }
+
+    //public interface IPluginMetaData
+    //{
+    //    string Name { get; }
+    //}
+
+    //[MetadataAttribute]
+    //[AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
+    //public class PluginExportAttribute : ExportAttribute, IPluginMetaData
+    //{
+    //    public string Name { get; set; }
+
+    //    public PluginExportAttribute() 
+    //        : base(typeof(IPlugin))
+    //    {
+            
+    //    }
+
+    //}
 }

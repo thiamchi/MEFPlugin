@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HelloWorld.Shell
+namespace HelloWorld.Layout
 {
     /// <summary>
-    /// Interaction logic for ShellView.xaml
+    /// Interaction logic for HelloView.xaml
     /// </summary>
-    public partial class ShellView : UserControl
+    public partial class HelloView : UserControl
     {
-        public ShellView()
+        public HelloView()
         {
             InitializeComponent();
         }
