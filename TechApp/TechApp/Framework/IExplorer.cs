@@ -6,16 +6,8 @@ using System.Threading.Tasks;
 
 namespace TechApp.Framework
 {
-    public enum ViewName
+    public interface IExplorer
     {
-        None,
-        AlphaView,
-
-        //Region
-        MenuBar,
-    }
-
-    public class GlobalConst
-    {
+        ViewName ScreenName { get; }
     }
 }

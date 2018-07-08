@@ -87,7 +87,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Explorer\MenuBarView.xaml.cs">
+      <DependentUpon>MenuBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Explorer\MenuBarViewModel.cs" />
     <Compile Include="Framework\GlobalConst.cs" />
+    <Compile Include="Framework\IExplorer.cs" />
     <Compile Include="Framework\IRegion.cs" />
     <Compile Include="Framework\IScreenSpace.cs" />
     <Compile Include="Screens\AlphaView.xaml.cs">
@@ -104,6 +109,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Explorer\MenuBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Screens\AlphaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

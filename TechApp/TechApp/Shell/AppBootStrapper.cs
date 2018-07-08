@@ -35,20 +35,6 @@ namespace TechApp.Shell
             var mainAssembly = new AssemblyCatalog(Assembly.GetExecutingAssembly());
             catalog.Catalogs.Add(mainAssembly);
 
-            // Custom dll
-            string exeLocalPath = new Uri(Assembly.GetExecutingAssembly().GetName().CodeBase).LocalPath;
-            FileInfo exeFileInfo = new FileInfo(exeLocalPath);
-            var path = Path.Combine(exeFileInfo.Directory.FullName, "plugins");
-            if (!Directory.Exists(path))
-                Directory.CreateDirectory(path); //create path if missing
-
-            foreach(var files in Directory.GetFiles(path, "*dll"))
-            {
-                var assembly = Assembly.LoadFrom(Path.Combine(path, files));
-                //if (assembly.GetType().GetInterfaces().Contains(typeof(IPlugin)))
-                catalog.Catalogs.Add(new AssemblyCatalog(assembly));
-            }
-
             m_Container = new CompositionContainer(catalog);
 
             batch.AddExportedValue(m_Container);
