@@ -32,9 +32,12 @@ namespace TechApp.Shell
             var catalog = new AggregateCatalog();
             var batch = new CompositionBatch();
 
-            var mainAssembly = new AssemblyCatalog(Assembly.GetExecutingAssembly());
-            catalog.Catalogs.Add(mainAssembly);
-
+            foreach (var assembly in SelectAssemblies())
+            {
+                var mainAssembly = new AssemblyCatalog(assembly);
+                catalog.Catalogs.Add(mainAssembly);
+            }
+            
             m_Container = new CompositionContainer(catalog);
 
             batch.AddExportedValue(m_Container);
@@ -54,6 +57,17 @@ namespace TechApp.Shell
                 return exports.First();
 
             throw new Exception(string.Format("Could not locate any instances of contract {0}.", contract));
+        }
+
+        protected override IEnumerable<Assembly> SelectAssemblies()
+        {
+            string exeLocalPath = new Uri(Assembly.GetExecutingAssembly().GetName().CodeBase).LocalPath;
+            FileInfo exeFileInfo = new FileInfo(exeLocalPath);
+            var path = Path.Combine(exeFileInfo.Directory.FullName, "plugins");
+
+            var assemblies = Directory.GetFiles(path, "*.dll", SearchOption.AllDirectories).Select(Assembly.LoadFrom).ToList();
+            assemblies.Add(Assembly.GetExecutingAssembly());
+            return assemblies;
         }
 
         protected override IEnumerable<object> GetAllInstances(Type serviceType)

@@ -28,6 +28,11 @@ namespace TechApp.Screens
         {
             get { return Items.First(x => x.ScreenName == ViewName.MenuBar); }
         }
+        
+        public IRegion Workspace
+        {
+            get { return Items.First(x => x.ScreenName == ViewName.GenericWorkspace); }
+        }
         #endregion
 
         #region Binding to View

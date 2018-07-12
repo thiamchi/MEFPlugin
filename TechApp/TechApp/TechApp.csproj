@@ -109,6 +109,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Workspace\GenericWorkspaceView.xaml.cs">
+      <DependentUpon>GenericWorkspaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\GenericWorkspaceViewModel.cs" />
     <Page Include="Explorer\MenuBarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +122,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Shell\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Workspace\GenericWorkspaceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,6 +164,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Framework\Plugins\" />
     <Folder Include="Screens\Interface\" />
     <Folder Include="Screens\Model\" />
   </ItemGroup>

@@ -13,22 +13,22 @@ namespace PluginContract
         void run();
     }
 
-    //public interface IPluginMetaData
-    //{
-    //    string Name { get; }
-    //}
+    public interface IPluginMetaData
+    {
+        string Name { get; }
+    }
 
-    //[MetadataAttribute]
-    //[AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
-    //public class PluginExportAttribute : ExportAttribute, IPluginMetaData
-    //{
-    //    public string Name { get; set; }
+    [MetadataAttribute]
+    [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
+    public class PluginExportAttribute : ExportAttribute, IPluginMetaData
+    {
+        public string Name { get; set; }
 
-    //    public PluginExportAttribute() 
-    //        : base(typeof(IPlugin))
-    //    {
-            
-    //    }
+        public PluginExportAttribute()
+            : base(typeof(IPlugin))
+        {
 
-    //}
+        }
+
+    }
 }

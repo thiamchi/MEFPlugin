@@ -10,9 +10,10 @@ namespace TechApp.Framework
     {
         None,
         AlphaView,
-
-        //Region
+        
+        //IRegion
         MenuBar,
+        GenericWorkspace,
     }
 
     public class GlobalConst
