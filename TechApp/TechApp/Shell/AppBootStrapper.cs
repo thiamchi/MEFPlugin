@@ -31,8 +31,9 @@ namespace TechApp.Shell
         {
             var catalog = new AggregateCatalog();
             var batch = new CompositionBatch();
+            var assemblies = SelectAssemblies();
 
-            foreach (var assembly in SelectAssemblies())
+            foreach (var assembly in assemblies)
             {
                 var mainAssembly = new AssemblyCatalog(assembly);
                 catalog.Catalogs.Add(mainAssembly);
