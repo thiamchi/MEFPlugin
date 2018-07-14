@@ -19,12 +19,7 @@ namespace TechApp.Workspace
             ScreenName = ViewName.GenericWorkspace;
             Items.AddRange(plugins);
         }
-
-        public IPlugin Hello
-        {
-            get { return Items.First(); }
-        }
-
+        
         #region Bind to View
         public ViewName ScreenName { get; private set; }
         #endregion

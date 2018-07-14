@@ -1,31 +1,29 @@
-﻿using HelloWorld.Framework;
+﻿using PluginContract;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.Composition;
 using Caliburn.Micro;
-using PluginContract;
 
-namespace HelloWorld.Layout
+namespace Matrix.MapMatrix
 {
     [Export(typeof(IPlugin)), PartCreationPolicy(CreationPolicy.NonShared)]
-    public class HelloViewModel : Screen, IPlugin
+    public class GenericCellViewModel : Screen, IPlugin
     {
         [ImportingConstructor]
-        public HelloViewModel()
+        public GenericCellViewModel() 
         {
-            DisplayName = "Hello";
-            PluginName = PluginName.Hello;
+            DisplayName = "Matrix1";
+            PluginName = PluginName.Matrix;
         }
-        
 
         public PluginName PluginName { get; private set; }
 
         public void run()
         {
-            Console.WriteLine("From HelloViewModel");
+            Console.WriteLine("From Matrix1");
         }
     }
 }

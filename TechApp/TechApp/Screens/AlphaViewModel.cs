@@ -41,7 +41,7 @@ namespace TechApp.Screens
             base.OnViewLoaded(view);
         }
 
-        public ViewName ScreenName { get; private set; }
+        public ViewName ScreenName { get; set; }
         #endregion
     }
 }

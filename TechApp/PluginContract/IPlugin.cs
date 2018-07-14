@@ -7,9 +7,16 @@ using System.Threading.Tasks;
 
 namespace PluginContract
 {
+    public enum PluginName
+    {
+        None,
+        Hello,
+        Matrix,
+    }
+
     public interface IPlugin
     {
-        string PluginName();
+        PluginName PluginName { get; }
         void run();
     }
 

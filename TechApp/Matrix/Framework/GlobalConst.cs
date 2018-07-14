@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TechApp.Framework
+namespace Matrix.Framework
 {
-    public interface IScreenSpace
+    class GlobalConst
     {
-        ViewName ScreenName { get; set; }
     }
 }
