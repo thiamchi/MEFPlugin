@@ -11,7 +11,7 @@ using PluginContract;
 namespace TechApp.Workspace
 {
     [Export(typeof(IRegion))]
-    public class GenericWorkspaceViewModel : Conductor<IPlugin>.Collection.OneActive, IRegion
+    public class GenericWorkspaceViewModel : Conductor<IPlugin>.Collection.AllActive, IRegion
     {
         [ImportingConstructor]
         public GenericWorkspaceViewModel([ImportMany] IEnumerable<IPlugin> plugins)

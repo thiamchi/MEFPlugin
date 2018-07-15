@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Matrix.MapMatrix
 {
     /// <summary>
-    /// Interaction logic for GenericCellView.xaml
+    /// Interaction logic for SampleMapView.xaml
     /// </summary>
-    public partial class GenericCellView : UserControl
+    public partial class SampleMapView : UserControl
     {
-        public GenericCellView()
+        public SampleMapView()
         {
             InitializeComponent();
         }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Matrix.Framework.MapMatrix
 {
-    interface IGenericCell
+    public interface IGenericMap
     {
+        double PosX { get; }
+        double PosY { get; }
+        double Color { get; }
+        double Size { get; } // in diameter
     }
 }

@@ -11,7 +11,7 @@
         <TabControl ItemsSource="{Binding Items}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TabControl.ContentTemplate>
                 <DataTemplate>
-                    <ContentControl cal:View.Model="{Binding}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+                    <ContentControl cal:View.Model="{Binding}"/>
                 </DataTemplate>
             </TabControl.ContentTemplate>
             <TabControl.ItemContainerStyle>
