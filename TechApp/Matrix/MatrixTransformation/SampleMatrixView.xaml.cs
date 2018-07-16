@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Matrix.MapMatrix
+namespace MatrixServer.MatrixTransformation
 {
     /// <summary>
-    /// Interaction logic for SampleMapView.xaml
+    /// Interaction logic for SampleMatrixView.xaml
     /// </summary>
-    public partial class SampleMapView : UserControl
+    public partial class SampleMatrixView : UserControl
     {
-        public SampleMapView()
+        public SampleMatrixView()
         {
             InitializeComponent();
         }

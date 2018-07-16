@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginContract", "PluginCon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{DD4668C4-DBAC-4617-B5D3-F5F01A88BDC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixServer", "Matrix\MatrixServer.csproj", "{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

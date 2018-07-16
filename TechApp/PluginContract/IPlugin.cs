@@ -11,7 +11,10 @@ namespace PluginContract
     {
         None,
         Hello,
-        Matrix,
+        SampleMap,
+        SampleMap2,
+        SampleSpace,
+        SampleMatrix,
     }
 
     public interface IPlugin

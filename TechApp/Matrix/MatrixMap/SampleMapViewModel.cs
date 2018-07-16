@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
-using Matrix.Framework.MapMatrix;
+using MatrixServer.Framework.MapMatrix;
 using LiveCharts;
 using LiveCharts.Defaults;
 
-namespace Matrix.MapMatrix
+namespace MatrixServer.MatrixMap
 {
     [Export(typeof(IPlugin)), PartCreationPolicy(CreationPolicy.NonShared)]
     public class SampleMapViewModel : Screen, IPlugin
@@ -21,7 +21,7 @@ namespace Matrix.MapMatrix
         public SampleMapViewModel()
         {
             DisplayName = "Matrix1";
-            PluginName = PluginName.Matrix;
+            PluginName = PluginName.SampleMap;
 
             ValueA = new ChartValues<ObservablePoint>();
             ValueB = new ChartValues<ObservablePoint>();
