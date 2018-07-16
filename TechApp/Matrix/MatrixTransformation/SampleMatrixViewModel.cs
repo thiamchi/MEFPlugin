@@ -55,7 +55,7 @@ namespace MatrixServer.MatrixTransformation
             {
                 m_InputText = value;
                 NotifyOfPropertyChange(() => InputText);
-                //NotifyOfPropertyChange(() => MathTexFormula);
+                NotifyOfPropertyChange(() => MathTexFormula);
             }
         }
 
@@ -150,7 +150,6 @@ namespace MatrixServer.MatrixTransformation
             {
                 m_TexScale = value;
                 NotifyOfPropertyChange(() => TexScale);
-                //NotifyOfPropertyChange(() => MathTexFormula);
             }
         }
         #endregion

@@ -100,6 +100,9 @@
     <Compile Include="Framework\GlobalConst.cs" />
     <Compile Include="Framework\MapMatrix\IGenericMap.cs" />
     <Compile Include="Framework\MapMatrix\SimpleMap.cs" />
+    <Compile Include="Framework\MatrixTransformation\IGenericFormula.cs" />
+    <Compile Include="Framework\MatrixTransformation\SimpleFormula.cs" />
+    <Compile Include="Framework\MatrixTransformation\Transformation.cs" />
     <Compile Include="MatrixMap\SampleMapView.xaml.cs">
       <DependentUpon>SampleMapView.xaml</DependentUpon>
     </Compile>
@@ -114,7 +117,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Framework\MatrixTransformation\" />
     <Folder Include="SpaceMatrix\" />
   </ItemGroup>
   <ItemGroup>

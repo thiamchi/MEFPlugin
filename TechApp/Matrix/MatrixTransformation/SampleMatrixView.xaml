@@ -56,17 +56,19 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Label Margin="10,0,10,0" Content="Scale: " Grid.Column="0" />
             <Slider Margin="10,0,10,0" Grid.Column="1"
-            Value="{Binding TexScale, Mode=TwoWay}" Minimum="7" Maximum="42"
+            Value="{Binding TexScale, Mode=TwoWay}" Minimum="12" Maximum="42"
             IsSnapToTickEnabled="True" TickPlacement="BottomRight" TickFrequency="1"
             AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="2" />
+            <TextBlock Grid.Column="2" Text="{Binding TexScale, Mode=OneWay}" IsEnabled="False"/>
         </Grid>
 
         <Border Margin="10,0,10,10" BorderBrush="LightGray" BorderThickness="1" Grid.Row="3" Grid.Column="0">
             <ScrollViewer Padding="4" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-                <ml:FormulaControl Formula="{Binding ElementName=InputText, Path=Text, NotifyOnValidationError=False}"
+                <ml:FormulaControl x:Name="MathTexFormula" Formula="{Binding ElementName=InputText, Path=Text, NotifyOnValidationError=False}"
                                 Scale="{Binding TexScale, Mode=TwoWay}"
                                 SelectionBrush="LightBlue"
                                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SnapsToDevicePixels="True" />
