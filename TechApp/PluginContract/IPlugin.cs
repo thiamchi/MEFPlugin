@@ -15,6 +15,8 @@ namespace PluginContract
         SampleMap2,
         SampleSpace,
         SampleMatrix,
+
+        MathServer,
     }
 
     public interface IPlugin

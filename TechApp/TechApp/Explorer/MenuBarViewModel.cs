@@ -16,8 +16,8 @@ namespace TechApp.Explorer
     [Export(typeof(IRegion))]
     public class MenuBarViewModel: Screen, IRegion
     {
-        private AggregateCatalog catalog;
-        private CompositionContainer container;
+        //private AggregateCatalog catalog;
+        //private CompositionContainer container;
 
         [ImportingConstructor]
         public MenuBarViewModel()
