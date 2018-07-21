@@ -44,7 +44,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,107 +57,157 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Explorer\Container\InputButtonView.xaml.cs">
+    <Compile Include="MathUI\Explorer\Container\InputButtonView.xaml.cs">
       <DependentUpon>InputButtonView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Explorer\Container\InputButtonViewModel.cs" />
-    <Compile Include="Explorer\Container\FunctionListView.xaml.cs">
+    <Compile Include="MathUI\Explorer\Container\InputButtonViewModel.cs" />
+    <Compile Include="MathUI\Explorer\Container\FunctionListView.xaml.cs">
       <DependentUpon>FunctionListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Explorer\Container\FunctionListViewModel.cs" />
-    <Compile Include="Explorer\Container\MathListView.xaml.cs">
+    <Compile Include="MathUI\Explorer\Container\FunctionListViewModel.cs" />
+    <Compile Include="MathUI\Explorer\Container\MathListView.xaml.cs">
       <DependentUpon>MathListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Explorer\Container\MathListViewModel.cs" />
-    <Compile Include="Explorer\Container\MiniKeyboardView.xaml.cs">
+    <Compile Include="MathUI\Explorer\Container\MathListViewModel.cs" />
+    <Compile Include="MathUI\Explorer\Container\MiniKeyboardView.xaml.cs">
       <DependentUpon>MiniKeyboardView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Explorer\Container\MiniKeyboardViewModel.cs" />
-    <Compile Include="Explorer\ExplorerView.xaml.cs">
+    <Compile Include="MathUI\Explorer\Container\MiniKeyboardViewModel.cs" />
+    <Compile Include="MathUI\Explorer\ExplorerView.xaml.cs">
       <DependentUpon>ExplorerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Explorer\ExplorerViewModel.cs" />
-    <Compile Include="Framework\Converter\trueToVisible.cs" />
-    <Compile Include="Framework\Explorer\IButton.cs" />
-    <Compile Include="Framework\GlobalConst.cs" />
-    <Compile Include="Framework\Helper\GridHelpers.cs" />
-    <Compile Include="Framework\IExplorer.cs" />
-    <Compile Include="Framework\IOptionList.cs" />
-    <Compile Include="Framework\IRegion.cs" />
-    <Compile Include="Framework\IMenu.cs" />
-    <Compile Include="Framework\IScreenSpace.cs" />
-    <Compile Include="Framework\IWorkPanel.cs" />
-    <Compile Include="Menu\MenuView.xaml.cs">
+    <Compile Include="MathUI\Explorer\ExplorerViewModel.cs" />
+    <Compile Include="MathUI\Framework\Converter\trueToVisible.cs" />
+    <Compile Include="MathUI\Framework\Explorer\IButton.cs" />
+    <Compile Include="MathUI\Framework\GlobalConst.cs" />
+    <Compile Include="MathUI\Framework\Helper\GridHelpers.cs" />
+    <Compile Include="MathUI\Framework\IElement.cs" />
+    <Compile Include="MathUI\Framework\IExplorer.cs" />
+    <Compile Include="MathUI\Framework\IOptionList.cs" />
+    <Compile Include="MathUI\Framework\IRegion.cs" />
+    <Compile Include="MathUI\Framework\IMenu.cs" />
+    <Compile Include="MathUI\Framework\IScreenSpace.cs" />
+    <Compile Include="MathUI\Framework\IWorkPanel.cs" />
+    <Compile Include="MathUI\Menu\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Menu\MenuViewModel.cs" />
-    <Compile Include="Menu\Ribbon\RibbonView.xaml.cs">
+    <Compile Include="MathUI\Menu\MenuViewModel.cs" />
+    <Compile Include="MathUI\Menu\Ribbon\RibbonView.xaml.cs">
       <DependentUpon>RibbonView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Menu\Ribbon\RibbonViewModel.cs" />
+    <Compile Include="MathUI\Menu\Ribbon\RibbonViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screenspace\AlphaView.xaml.cs">
+    <Compile Include="MathUI\Resource\StringTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringTable.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MathUI\Screenspace\AlphaView.xaml.cs">
       <DependentUpon>AlphaView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screenspace\AlphaViewModel.cs" />
-    <Compile Include="Shell\ShellView.xaml.cs">
+    <Compile Include="MathUI\Screenspace\AlphaViewModel.cs" />
+    <Compile Include="MathUI\Shell\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Shell\ShellViewModel.cs" />
-    <Compile Include="Workspace\Container\WorksheetView.xaml.cs">
+    <Compile Include="MathUI\Shell\ShellViewModel.cs" />
+    <Compile Include="MathUI\Workspace\Container\DisplayView.xaml.cs">
+      <DependentUpon>DisplayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MathUI\Workspace\Container\DisplayViewModel.cs" />
+    <Compile Include="MathUI\Workspace\Container\InputPanelView.xaml.cs">
+      <DependentUpon>InputPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MathUI\Workspace\Container\InputPanelViewModel.cs" />
+    <Compile Include="MathUI\Workspace\Container\OutputPanelView.xaml.cs">
+      <DependentUpon>OutputPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MathUI\Workspace\Container\OutputPanelViewModel.cs" />
+    <Compile Include="MathUI\Workspace\Container\SolutionDisplayView.xaml.cs">
+      <DependentUpon>SolutionDisplayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MathUI\Workspace\Container\SolutionDisplayViewModel.cs" />
+    <Compile Include="MathUI\Workspace\Container\StepDisplayView.xaml.cs">
+      <DependentUpon>StepDisplayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MathUI\Workspace\Container\StepDisplayViewModel.cs" />
+    <Compile Include="MathUI\Workspace\Model\Entry.cs" />
+    <Compile Include="MathUI\Workspace\Task\WorksheetView.xaml.cs">
       <DependentUpon>WorksheetView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Workspace\Container\WorksheetViewModel.cs" />
-    <Compile Include="Workspace\WorkspaceView.xaml.cs">
+    <Compile Include="MathUI\Workspace\Task\WorksheetViewModel.cs" />
+    <Compile Include="MathUI\Workspace\WorkspaceView.xaml.cs">
       <DependentUpon>WorkspaceView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Workspace\WorkspaceViewModel.cs" />
+    <Compile Include="MathUI\Workspace\WorkspaceViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Menu\Container\" />
+    <Folder Include="MathControl\" />
+    <Folder Include="MathEngine\" />
+    <Folder Include="MathUI\Framework\Model\" />
+    <Folder Include="MathUI\Menu\Container\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Explorer\Container\InputButtonView.xaml">
+    <Page Include="MathUI\Explorer\Container\InputButtonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Explorer\Container\FunctionListView.xaml">
+    <Page Include="MathUI\Explorer\Container\FunctionListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Explorer\Container\MathListView.xaml">
+    <Page Include="MathUI\Explorer\Container\MathListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Explorer\Container\MiniKeyboardView.xaml">
+    <Page Include="MathUI\Explorer\Container\MiniKeyboardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Explorer\ExplorerView.xaml">
+    <Page Include="MathUI\Explorer\ExplorerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Menu\MenuView.xaml">
+    <Page Include="MathUI\Menu\MenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Menu\Ribbon\RibbonView.xaml">
+    <Page Include="MathUI\Menu\Ribbon\RibbonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screenspace\AlphaView.xaml">
+    <Page Include="MathUI\Screenspace\AlphaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Shell\ShellView.xaml">
+    <Page Include="MathUI\Shell\ShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Workspace\Container\WorksheetView.xaml">
+    <Page Include="MathUI\Workspace\Container\DisplayView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Workspace\WorkspaceView.xaml">
+    <Page Include="MathUI\Workspace\Container\InputPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MathUI\Workspace\Container\OutputPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MathUI\Workspace\Container\SolutionDisplayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MathUI\Workspace\Container\StepDisplayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MathUI\Workspace\Task\WorksheetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MathUI\Workspace\WorkspaceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,6 +220,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MathUI\Resource\StringTable.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringTable.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
