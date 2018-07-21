@@ -112,7 +112,6 @@
     <Compile Include="Workspace\WorkspaceViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Explorer\NewFolder1\" />
     <Folder Include="Menu\Container\" />
   </ItemGroup>
   <ItemGroup>

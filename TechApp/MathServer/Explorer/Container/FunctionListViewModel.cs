@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,31 +14,66 @@ namespace MathServer.Explorer.Container
     public class FunctionListViewModel: Screen, IOptionList
     {
         [ImportingConstructor]
-        public FunctionListViewModel(ViewName viewName)
+        public FunctionListViewModel(ViewName viewName, int order, params string[] functions)
         {
             ViewName = viewName;
+            FunctionHeader = ViewName.ToString();
+            RowCount = functions.Length;
+            RowIndex = order;
+
+            FunctionPadCollection = new ObservableCollection<InputButtonViewModel>();
+            int i = 0;
+            foreach(string function in functions)
+            {
+                FunctionPadCollection.Add(new InputButtonViewModel(i++, 0, "X", "Button X"));
+            }
+        }
+
+        private int m_RowIndex;
+        public int RowIndex
+        {
+            get { return m_RowIndex; }
+            private set
+            {
+                m_RowIndex = value;
+                NotifyOfPropertyChange(() => RowIndex);
+            }
         }
 
         #region Binding to View
-        private bool m_Toggle;
-        public bool Toggle
+        private int m_RowCount;
+        public int RowCount
         {
-            get { return m_Toggle; }
+            get { return m_RowCount; }
             set
             {
-                m_Toggle = value;
-                NotifyOfPropertyChange(() => Toggle);
-                NotifyOfPropertyChange(() => Icon);
+                m_RowCount = value;
+                NotifyOfPropertyChange(() => RowCount);
             }
         }
 
-        public string Icon
+        private ObservableCollection<InputButtonViewModel> m_FunctionPadCollection;
+        public ObservableCollection<InputButtonViewModel> FunctionPadCollection
         {
-            get
+            get { return m_FunctionPadCollection; }
+            set
             {
-                return Toggle ? "-" : "+";
+                m_FunctionPadCollection = value;
+                NotifyOfPropertyChange(() => FunctionPadCollection);
             }
         }
+
+        private string m_FunctionHeader;
+        public string FunctionHeader
+        {
+            get { return m_FunctionHeader; }
+            set
+            {
+                m_FunctionHeader = value;
+                NotifyOfPropertyChange(() => FunctionHeader);
+            }
+        }
+
 
         public ViewName ViewName { get; private set; }
         #endregion

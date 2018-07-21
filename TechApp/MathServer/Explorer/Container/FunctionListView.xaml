@@ -5,27 +5,47 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MathServer.Explorer.Container"
              xmlns:convert="clr-namespace:MathServer.Framework.Converter"
+             xmlns:helper="clr-namespace:MathServer.Framework.Helper"
+             xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <convert:trueToVisible x:Key="trueToVisible" TrueValue="Visible" FalseValue="Hidden"/>
     </UserControl.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <DockPanel Grid.Row="0">
-            <ToggleButton x:Name="Toggle" Content="{Binding Icon}">
-            </ToggleButton>
-            <Label Content="Keyboard"/>
-        </DockPanel>
-        <GroupBox Grid.Row="1" Visibility="{Binding Toggle, Converter={StaticResource trueToVisible}}">
-            <StackPanel>
-                <Label Content="this"/>
-                <Label Content="that"/>
-                <Label Content="this"/>
-            </StackPanel>
-        </GroupBox>
+        <Expander IsExpanded="False">
+            <Expander.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.FunctionHeader}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </Expander.HeaderTemplate>
+            <Expander.Content>
+                <Grid>
+                    <Grid>
+                        <ItemsControl ItemsSource="{Binding FunctionPadCollection}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <Grid helper:GridHelpers.RowCount="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.RowCount}">
+                                    </Grid>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemContainerStyle>
+                                <Style>
+                                    <Setter Property="Grid.Row" Value="{Binding RowIndex}"/>
+                                </Style>
+                            </ItemsControl.ItemContainerStyle>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <ContentControl cal:View.Model="{Binding}" Margin="1"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+
+                </Grid>
+            </Expander.Content>
+        </Expander>
     </Grid>
 </UserControl>

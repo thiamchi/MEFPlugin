@@ -4,15 +4,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MathServer.Explorer.Container"
+             xmlns:helper="clr-namespace:MathServer.Framework.Helper"
+             xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <ListBox ItemsSource="{Binding MathList}">
-            <ListBox.ItemTemplate>
+    <Grid Background="GreenYellow">
+        <ItemsControl ItemsSource="{Binding MathList}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid helper:GridHelpers.RowCount="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.RowCount}">
+                    </Grid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Grid.Row" Value="{Binding RowIndex}"/>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <ContentControl Content="{Binding FunctionList}"/>
+                    <ContentControl cal:View.Model="{Binding}" Margin="1"/>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </UserControl>

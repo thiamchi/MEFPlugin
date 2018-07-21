@@ -23,15 +23,15 @@
                 </DataTemplate>
             </Expander.HeaderTemplate>
             <Expander.Content>
-                <Grid>
+                <Grid Background="LightGray">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
@@ -39,7 +39,8 @@
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <Grid helper:GridHelpers.RowCount="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.RowCount}"
-                                          helper:GridHelpers.ColumnCount="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.ColumnCount}">
+                                          helper:GridHelpers.ColumnCount="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.ColumnCount}"
+                                          Background="LightBlue">
                                     </Grid>
                                 </ItemsPanelTemplate>
                             </ItemsControl.ItemsPanel>
