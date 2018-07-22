@@ -10,10 +10,10 @@ using Caliburn.Micro;
 namespace MathServer.MathUI.Workspace
 {
     [Export(typeof(IRegion)), PartCreationPolicy(CreationPolicy.NonShared)]
-    public class WorkspaceViewModel : Conductor<IWorkPanel>.Collection.AllActive, IRegion
+    public class WorkspaceViewModel : Conductor<IWorkSheet>.Collection.AllActive, IRegion
     {
         [ImportingConstructor]
-        public WorkspaceViewModel([ImportMany] IEnumerable<IWorkPanel> workPanels)
+        public WorkspaceViewModel([ImportMany] IEnumerable<IWorkSheet> workPanels)
         {
             ViewName = ViewName.Workspace;
             Items.AddRange(workPanels);

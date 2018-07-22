@@ -12,6 +12,7 @@ namespace MathServer.MathUI.Workspace.Model
     {
         public Entry()
         {
+            Id = Guid.Empty;
             Input = null;
             Output = null;
             Steps = null;
@@ -20,22 +21,41 @@ namespace MathServer.MathUI.Workspace.Model
 
         public Entry(Input input, Output output)
         {
+            Id = Guid.NewGuid();
             Input = input;
             Output = output;
+
+            InputVM = new DisplayViewModel(Input.Label, Input.Display);
+            OutputVM = new DisplayViewModel(Output.Label, Output.Display);
         }
 
         public Entry(Input input, ObservableCollection<Step> steps, ObservableCollection<Solution> solutions)
         {
+            Id = Guid.NewGuid();
             Input = input;
             Output = null;
             Steps = steps;
             Solutions = solutions;
+
+            InputVM = new DisplayViewModel(Input.Label, Input.Display);
+            OutputVM = new DisplayViewModel(Output.Label, Output.Display);
+            StepsVM = new StepDisplayViewModel("", Steps);
+            SolutionVM = new ObservableCollection<DisplayViewModel>();
+            foreach(Solution sol in solutions)
+            {
+                (SolutionVM as ObservableCollection<DisplayViewModel>).Add(new DisplayViewModel(sol.Label, sol.Display));
+            }
         }
 
+        public Guid Id { get; set; }
         public Input Input { get; set; }
         public Output Output { get; set; }
         public ObservableCollection<Step> Steps { get; set; }
         public ObservableCollection<Solution> Solutions { get; set; }
+        public object InputVM { get; set; }
+        public object OutputVM { get; set; }
+        public object StepsVM { get; set; }
+        public object SolutionVM { get; set; }
 
     }
 

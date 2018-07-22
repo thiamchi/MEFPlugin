@@ -77,17 +77,22 @@
       <DependentUpon>ExplorerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MathUI\Explorer\ExplorerViewModel.cs" />
+    <Compile Include="MathUI\Framework\Converter\ListBoxIndexConverter.cs" />
     <Compile Include="MathUI\Framework\Converter\trueToVisible.cs" />
     <Compile Include="MathUI\Framework\Explorer\IButton.cs" />
     <Compile Include="MathUI\Framework\GlobalConst.cs" />
     <Compile Include="MathUI\Framework\Helper\GridHelpers.cs" />
+    <Compile Include="MathUI\Framework\Helper\MouseOverHelper.cs" />
+    <Compile Include="MathUI\Framework\Helper\RelayCommand.cs" />
     <Compile Include="MathUI\Framework\IElement.cs" />
     <Compile Include="MathUI\Framework\IExplorer.cs" />
+    <Compile Include="MathUI\Framework\IGroup.cs" />
     <Compile Include="MathUI\Framework\IOptionList.cs" />
     <Compile Include="MathUI\Framework\IRegion.cs" />
     <Compile Include="MathUI\Framework\IMenu.cs" />
     <Compile Include="MathUI\Framework\IScreenSpace.cs" />
     <Compile Include="MathUI\Framework\IWorkPanel.cs" />
+    <Compile Include="MathUI\Framework\IWorkSheet.cs" />
     <Compile Include="MathUI\Menu\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
@@ -114,18 +119,14 @@
       <DependentUpon>DisplayView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MathUI\Workspace\Container\DisplayViewModel.cs" />
-    <Compile Include="MathUI\Workspace\Container\InputPanelView.xaml.cs">
+    <Compile Include="MathUI\Workspace\Panel\InputPanelView.xaml.cs">
       <DependentUpon>InputPanelView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MathUI\Workspace\Container\InputPanelViewModel.cs" />
-    <Compile Include="MathUI\Workspace\Container\OutputPanelView.xaml.cs">
+    <Compile Include="MathUI\Workspace\Panel\InputPanelViewModel.cs" />
+    <Compile Include="MathUI\Workspace\Panel\OutputPanelView.xaml.cs">
       <DependentUpon>OutputPanelView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MathUI\Workspace\Container\OutputPanelViewModel.cs" />
-    <Compile Include="MathUI\Workspace\Container\SolutionDisplayView.xaml.cs">
-      <DependentUpon>SolutionDisplayView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MathUI\Workspace\Container\SolutionDisplayViewModel.cs" />
+    <Compile Include="MathUI\Workspace\Panel\OutputPanelViewModel.cs" />
     <Compile Include="MathUI\Workspace\Container\StepDisplayView.xaml.cs">
       <DependentUpon>StepDisplayView.xaml</DependentUpon>
     </Compile>
@@ -187,15 +188,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MathUI\Workspace\Container\InputPanelView.xaml">
+    <Page Include="MathUI\Workspace\Panel\InputPanelView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MathUI\Workspace\Container\OutputPanelView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MathUI\Workspace\Container\SolutionDisplayView.xaml">
+    <Page Include="MathUI\Workspace\Panel\OutputPanelView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

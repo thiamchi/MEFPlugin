@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using MathServer.MathUI.Workspace.Model;
 
-namespace MathServer.MathUI.Workspace.Container
+namespace MathServer.MathUI.Workspace.Panel
 {
-    [Export(typeof(IElement)),PartCreationPolicy(CreationPolicy.NonShared)]
-    public class InputPanelViewModel : Screen, IElement
+    [Export(typeof(IWorkPanel)),PartCreationPolicy(CreationPolicy.NonShared)]
+    public class InputPanelViewModel : Screen, IWorkPanel
     {
         IEventAggregator m_Event;
 

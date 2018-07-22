@@ -9,9 +9,6 @@
              xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.Resources>
-        <convert:trueToVisible x:Key="trueToVisible" TrueValue="Visible" FalseValue="Hidden"/>
-    </UserControl.Resources>
     <Grid>
         <Expander IsExpanded="False">
             <Expander.HeaderTemplate>

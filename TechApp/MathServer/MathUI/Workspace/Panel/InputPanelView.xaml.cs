@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MathServer.MathUI.Workspace.Container
+namespace MathServer.MathUI.Workspace.Panel
 {
     /// <summary>
     /// Interaction logic for InputPanelView.xaml

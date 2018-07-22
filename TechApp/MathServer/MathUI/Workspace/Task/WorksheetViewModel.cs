@@ -9,18 +9,18 @@ using Caliburn.Micro;
 
 namespace MathServer.MathUI.Workspace.Task
 {
-    [Export(typeof(IWorkPanel)), PartCreationPolicy(CreationPolicy.NonShared)]
-    public class WorksheetViewModel : Conductor<IElement>.Collection.AllActive, IWorkPanel
+    [Export(typeof(IWorkSheet)), PartCreationPolicy(CreationPolicy.NonShared)]
+    public class WorksheetViewModel : Conductor<IWorkPanel>.Collection.AllActive, IWorkSheet
     {
         [ImportingConstructor]
-        public WorksheetViewModel([ImportMany] IEnumerable<IElement> elements)
+        public WorksheetViewModel([ImportMany] IEnumerable<IWorkPanel> workPanels)
         {
             ViewName = ViewName.Worksheet;
-            Items.AddRange(elements);
+            Items.AddRange(workPanels);
         }
 
-        public IElement OutputPanel { get { return Items.First(x => x.ViewName == ViewName.OutputPanel); } }
-        public IElement InputPanel { get { return Items.First(x => x.ViewName == ViewName.InputPanel); } }
+        public IWorkPanel OutputPanel { get { return Items.First(x => x.ViewName == ViewName.OutputPanel); } }
+        public IWorkPanel InputPanel { get { return Items.First(x => x.ViewName == ViewName.InputPanel); } }
 
 
         public ViewName ViewName { get; private set; }
