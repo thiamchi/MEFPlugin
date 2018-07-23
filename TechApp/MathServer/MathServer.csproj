@@ -93,6 +93,7 @@
     <Compile Include="MathUI\Framework\IScreenSpace.cs" />
     <Compile Include="MathUI\Framework\IWorkPanel.cs" />
     <Compile Include="MathUI\Framework\IWorkSheet.cs" />
+    <Compile Include="MathUI\Framework\Model\MathButton.cs" />
     <Compile Include="MathUI\Menu\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
@@ -144,7 +145,6 @@
   <ItemGroup>
     <Folder Include="MathControl\" />
     <Folder Include="MathEngine\" />
-    <Folder Include="MathUI\Framework\Model\" />
     <Folder Include="MathUI\Menu\Container\" />
   </ItemGroup>
   <ItemGroup>
