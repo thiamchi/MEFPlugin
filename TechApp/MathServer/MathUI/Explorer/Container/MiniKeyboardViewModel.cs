@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
-using MathServer.MathUI.Framework.Explorer;
+using MathServer.MathUI.Framework.Model;
+using MathServer.MathUI.Framework.Container;
 
 namespace MathServer.MathUI.Explorer.Container
 {
@@ -21,18 +22,18 @@ namespace MathServer.MathUI.Explorer.Container
             RowCount = 4;
             ColumnCount = 4;
 
-            NumericPadCollection = new ObservableCollection<IButton>();
+            NumericPadCollection = new ObservableCollection<InputButtonViewModel>();
 
             for (int i = 0; i < RowCount; i++)
             {
                 for(int j = 0; j < ColumnCount; j++)
                 {
-                    NumericPadCollection.Add(new InputButtonViewModel(i, j, "X", "Button X"));
+                    NumericPadCollection.Add(new InputButtonViewModel(i, j, new MathButton("x", "type", "")));
                 }
             }
         }
 
-        public ObservableCollection<IButton> NumericPadCollection { get; private set; }
+        public ObservableCollection<InputButtonViewModel> NumericPadCollection { get; private set; }
 
         #region Binding to View
         private int m_RowCount;

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MathServer.MathUI.Explorer.Container
+namespace MathServer.MathUI.Framework.Container
 {
     /// <summary>
     /// Interaction logic for InputButtonView.xaml

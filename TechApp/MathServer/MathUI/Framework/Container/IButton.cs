@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MathServer.MathUI.Framework.Explorer
+namespace MathServer.MathUI.Framework.Container
 {
     public interface IButton
     {
-        string Key { get; }
     }
 }

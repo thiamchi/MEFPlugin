@@ -1,12 +1,13 @@
-﻿<UserControl x:Class="MathServer.MathUI.Explorer.Container.InputButtonView"
+﻿<UserControl x:Class="MathServer.MathUI.Framework.Container.InputButtonView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MathServer.MathUI.Explorer.Container"
+             xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
              d:DesignHeight="20" d:DesignWidth="50">
-    <Grid>
-        <Button Content="{Binding Key, Mode=OneWay}" ToolTip="{Binding Hint, Mode=OneWay}"/>
+    <Grid DataContext="{Binding MathButton}">
+        <Button cal:Message.Attach="Click()" Content="{Binding Name, Mode=OneWay}" ToolTip="{Binding Helper, Mode=OneWay}"/>
     </Grid>
 </UserControl>

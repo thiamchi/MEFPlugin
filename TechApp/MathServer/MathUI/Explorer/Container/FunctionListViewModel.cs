@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
+using MathServer.MathUI.Framework.Container;
+using MathServer.MathUI.Framework.Model;
 
 namespace MathServer.MathUI.Explorer.Container
 {
@@ -25,7 +27,7 @@ namespace MathServer.MathUI.Explorer.Container
             int i = 0;
             foreach(string function in functions)
             {
-                FunctionPadCollection.Add(new InputButtonViewModel(i++, 0, function, string.Format("Button {0}", function)));
+                FunctionPadCollection.Add(new InputButtonViewModel(i++, 0, new MathButton(function,"type", string.Format("helper : {0}", function))));
             }
         }
 

@@ -7,11 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using MathServer.MathUI.Workspace.Model;
+using MathServer.MathUI.Framework.Model;
 
 namespace MathServer.MathUI.Workspace.Panel
 {
     [Export(typeof(IWorkPanel)),PartCreationPolicy(CreationPolicy.NonShared)]
-    public class InputPanelViewModel : Screen, IWorkPanel
+    public class InputPanelViewModel : Screen, IWorkPanel, IHandle<MathButton>
     {
         IEventAggregator m_Event;
 
@@ -20,6 +21,7 @@ namespace MathServer.MathUI.Workspace.Panel
         {
             ViewName = ViewName.InputPanel;
             m_Event = events;
+            m_Event.Subscribe(this);
         }
 
         public void Enter()
@@ -35,7 +37,24 @@ namespace MathServer.MathUI.Workspace.Panel
             Input = string.Empty;
         }
 
+        public void Handle(MathButton mathButton)
+        {
+            Input += mathButton.Name;
+            Description = mathButton.Helper;
+            NotifyOfPropertyChange(() => Input);
+        }
+
         public string Input { get; set; }
+        //private string m_Input;
+        //public string Input
+        //{
+        //    get { return m_Input; }
+        //    private set
+        //    {
+        //        m_Input = value;
+        //        NotifyOfPropertyChange(() => Input);
+        //    }
+        //}
 
         private string m_Description;
         public string Description
