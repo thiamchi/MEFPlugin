@@ -40,7 +40,7 @@ namespace MathServer.MathUI.Workspace.Panel
         public void Handle(MathButton mathButton)
         {
             Input += mathButton.Name;
-            Description = mathButton.Helper;
+            if (mathButton.Helper != "") Description = mathButton.Helper;
             NotifyOfPropertyChange(() => Input);
         }
 
