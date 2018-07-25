@@ -66,6 +66,9 @@ namespace TechApp.Shell
             FileInfo exeFileInfo = new FileInfo(exeLocalPath);
             var path = Path.Combine(exeFileInfo.Directory.FullName, "plugins");
 
+            bool exist = System.IO.Directory.Exists(path);
+            if (!exist) System.IO.Directory.CreateDirectory(path);
+
             var assemblies = Directory.GetFiles(path, "*.dll", SearchOption.AllDirectories).Select(Assembly.LoadFrom).ToList();
             assemblies.Add(Assembly.GetExecutingAssembly());
             return assemblies;

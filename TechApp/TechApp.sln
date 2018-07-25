@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixServer", "Matrix\Matr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathServer", "MathServer\MathServer.csproj", "{F3D0BB19-FDA3-44D4-B2F6-FBC15E3E2EE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningServer", "LearningServer\LearningServer.csproj", "{9CA2FB57-043A-4414-9FC4-A913276586C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F3D0BB19-FDA3-44D4-B2F6-FBC15E3E2EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3D0BB19-FDA3-44D4-B2F6-FBC15E3E2EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3D0BB19-FDA3-44D4-B2F6-FBC15E3E2EE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA2FB57-043A-4414-9FC4-A913276586C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA2FB57-043A-4414-9FC4-A913276586C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA2FB57-043A-4414-9FC4-A913276586C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA2FB57-043A-4414-9FC4-A913276586C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

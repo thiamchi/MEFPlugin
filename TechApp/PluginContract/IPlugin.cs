@@ -17,6 +17,7 @@ namespace PluginContract
         SampleMatrix,
 
         MathServer,
+        LearningServer,
     }
 
     public interface IPlugin

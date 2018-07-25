@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="LearningServer.LearningUI.Workspace.WorkspaceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LearningServer.LearningUI.Workspace"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TabControl ItemsSource="{Binding Items}" Background="Wheat">
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <ContentControl cal:View.Model="{Binding}"/>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="TabItem">
+                    <Setter Property="Header" Value="{Binding ViewName}"/>
+                </Style>
+            </TabControl.ItemContainerStyle>
+        </TabControl>
+    </Grid>
+</UserControl>
