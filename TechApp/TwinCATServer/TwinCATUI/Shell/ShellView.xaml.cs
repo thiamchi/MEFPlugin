@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TwinCATServer
+namespace TwinCATServer.TwinCATUI.Shell
 {
     /// <summary>
-    /// Interaction logic for TestView.xaml
+    /// Interaction logic for ShellView.xaml
     /// </summary>
-    public partial class TestView : UserControl
+    public partial class ShellView : UserControl
     {
-        public TestView()
+        public ShellView()
         {
             InitializeComponent();
         }
