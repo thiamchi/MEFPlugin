@@ -4,15 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CA2FB57-043A-4414-9FC4-A913276586C1}</ProjectGuid>
+    <ProjectGuid>{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LearningServer</RootNamespace>
-    <AssemblyName>LearningServer</AssemblyName>
+    <RootNamespace>TwinCATServer</RootNamespace>
+    <AssemblyName>TwinCATServer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,7 +44,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -57,40 +56,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="TwinCAT.Ads, Version=4.2.173.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Beckhoff.TwinCAT.Ads.4.2.173\lib\Net40-full\TwinCAT.Ads.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LearningUI\Explorer\ExplorerView.xaml.cs">
-      <DependentUpon>ExplorerView.xaml</DependentUpon>
+    <Compile Include="TestView.xaml.cs">
+      <DependentUpon>TestView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LearningUI\Explorer\ExplorerViewModel.cs" />
-    <Compile Include="LearningUI\Framework\Model\GlobalConst.cs" />
-    <Compile Include="LearningUI\Framework\ViewModel\IExplorer.cs" />
-    <Compile Include="LearningUI\Framework\ViewModel\IMenu.cs" />
-    <Compile Include="LearningUI\Framework\ViewModel\IRegion.cs" />
-    <Compile Include="LearningUI\Framework\ViewModel\IScreenspace.cs" />
-    <Compile Include="LearningUI\Framework\ViewModel\IWorksheet.cs" />
-    <Compile Include="LearningUI\Framework\ViewModel\IWorkspace.cs" />
-    <Compile Include="LearningUI\Menu\MenuView.xaml.cs">
-      <DependentUpon>MenuView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LearningUI\Menu\MenuViewModel.cs" />
-    <Compile Include="LearningUI\Screenspace\AlphaView.xaml.cs">
-      <DependentUpon>AlphaView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LearningUI\Screenspace\AlphaViewModel.cs" />
-    <Compile Include="LearningUI\Shell\ShellView.xaml.cs">
-      <DependentUpon>ShellView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LearningUI\Shell\ShellViewModel.cs" />
-    <Compile Include="LearningUI\Workspace\WorkspaceView.xaml.cs">
-      <DependentUpon>WorkspaceView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LearningUI\Workspace\WorkspaceViewModel.cs" />
+    <Compile Include="TestViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PluginContract\PluginContract.csproj">
@@ -99,31 +75,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="LearningUI\Explorer\ExplorerView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LearningUI\Menu\MenuView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LearningUI\Screenspace\AlphaView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LearningUI\Shell\ShellView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LearningUI\Workspace\WorkspaceView.xaml">
+    <Page Include="TestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="LearningUI\Explorer\Container\" />
-    <Folder Include="LearningUI\Framework\Container\" />
-    <Folder Include="LearningUI\Workspace\Container\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
