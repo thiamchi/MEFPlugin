@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningServer", "LearningS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwinCATServer", "TwinCATServer\TwinCATServer.csproj", "{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TensorPyServer", "TensorPyServer\TensorPyServer.pyproj", "{52FA3586-A127-4C24-BB56-2B2420B33AFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,8 @@ Global
 		{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52FA3586-A127-4C24-BB56-2B2420B33AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52FA3586-A127-4C24-BB56-2B2420B33AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
