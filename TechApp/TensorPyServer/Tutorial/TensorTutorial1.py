@@ -1,6 +1,7 @@
 #%% Prologue
 """ 
     this is writing in Jupyter style
+    use Ctrl+Enter execute Run Cell
     basic 1 : variables, constants and placeholders
 """
 
@@ -49,3 +50,7 @@ print(sess.run(helloworld))
 
 #%% In[13] : close session
 sess.close()
+
+"""PLACE HOLDERS"""
+
+#%% In[1] :
