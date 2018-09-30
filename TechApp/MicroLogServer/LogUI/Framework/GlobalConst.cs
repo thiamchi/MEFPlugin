@@ -11,6 +11,8 @@ namespace MicroLogServer.LogUI.Framework
         None,
 
         Menu,
+        BasicMenu,
+        CustomMenu,
         Explorer,
         Workspace,
 

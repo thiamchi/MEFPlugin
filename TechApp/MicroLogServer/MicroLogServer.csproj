@@ -69,9 +69,18 @@
     <Compile Include="LogUI\Framework\GlobalConst.cs" />
     <Compile Include="LogUI\Framework\IExplorer.cs" />
     <Compile Include="LogUI\Framework\IMenu.cs" />
+    <Compile Include="LogUI\Framework\IPrompt.cs" />
     <Compile Include="LogUI\Framework\IRegion.cs" />
     <Compile Include="LogUI\Framework\IScreenspace.cs" />
     <Compile Include="LogUI\Framework\IWorkspace.cs" />
+    <Compile Include="LogUI\Menu\Container\BasicMenuView.xaml.cs">
+      <DependentUpon>BasicMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogUI\Menu\Container\BasicMenuViewModel.cs" />
+    <Compile Include="LogUI\Menu\Container\CustomMenuView.xaml.cs">
+      <DependentUpon>CustomMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogUI\Menu\Container\CustomMenuViewModel.cs" />
     <Compile Include="LogUI\Menu\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
@@ -126,12 +135,20 @@
     <Folder Include="LogUI\Explorer\Container\" />
     <Folder Include="LogUI\Framework\Converter\" />
     <Folder Include="LogUI\Framework\Helper\" />
-    <Folder Include="LogUI\Menu\Container\" />
+    <Folder Include="LogUI\Prompt\" />
     <Folder Include="LogUI\Screenspace\Container\" />
     <Folder Include="LogUI\Workspace\Container\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="LogUI\Explorer\ExplorerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogUI\Menu\Container\BasicMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogUI\Menu\Container\CustomMenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -13,11 +13,16 @@ namespace MicroLogServer.LogUI.Menu
     public class MenuViewModel : Conductor<IMenu>.Collection.AllActive, IRegion
     {
         [ImportingConstructor]
-        public MenuViewModel([ImportMany] IEnumerable<IMenu> ribbons)
+        public MenuViewModel([ImportMany] IEnumerable<IMenu> menus)
         {
             ViewName = ViewName.Menu;
+            Items.AddRange(menus);
         }
 
         public ViewName ViewName { get; private set; }
+
+        public IMenu BasicMenu { get { return Items.First(x => x.ViewName == ViewName.BasicMenu); } }
+
+        public IMenu CustomMenu { get { return Items.First(x => x.ViewName == ViewName.CustomMenu); } }
     }
 }
