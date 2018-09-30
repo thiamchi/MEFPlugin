@@ -19,6 +19,7 @@ namespace PluginContract
         MathServer,
         LearningServer,
         TwinCATServer,
+        MicroLogServer,
     }
 
     public interface IPlugin
