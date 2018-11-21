@@ -13,8 +13,11 @@ namespace MicroLogServer.LogUI.Framework
         Menu,
         BasicMenu,
         CustomMenu,
+
         Explorer,
         Workspace,
+        Content,
+        Filter,
 
         //--Screenspace--
         Alpha,

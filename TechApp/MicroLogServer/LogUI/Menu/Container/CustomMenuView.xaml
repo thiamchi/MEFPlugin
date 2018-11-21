@@ -8,8 +8,8 @@
              d:DesignHeight="30" d:DesignWidth="800">
     <Grid>
         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-            <Button Content="Open" Margin="2 2 2 2" Padding="2 2 2 2"/>
-            <Button Content="Highlight" Margin="2 2 2 2" Padding="2 2 2 2"/>
+            <Button Content="Open" x:Name="Open" Margin="2 2 2 2" Padding="2 2 2 2"/>
+            <Label Content="{Binding FilePath}" Margin="2 2 2 2" Padding="2 2 2 2"/>
         </StackPanel>
     </Grid>
 </UserControl>

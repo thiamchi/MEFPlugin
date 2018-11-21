@@ -19,6 +19,8 @@ namespace MicroLogServer.LogUI.Workspace
             Items.AddRange(workspaces);
         }
 
+        public IWorkspace Content { get { return Items.First(x => x.ViewName == ViewName.Content); } }
+
         public ViewName ViewName { get; private set; }
     }
 }

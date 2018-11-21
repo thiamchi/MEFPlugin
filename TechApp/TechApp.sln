@@ -9,19 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginContract", "PluginCon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{DD4668C4-DBAC-4617-B5D3-F5F01A88BDC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixServer", "Matrix\MatrixServer.csproj", "{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathServer", "MathServer\MathServer.csproj", "{F3D0BB19-FDA3-44D4-B2F6-FBC15E3E2EE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningServer", "LearningServer\LearningServer.csproj", "{9CA2FB57-043A-4414-9FC4-A913276586C1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwinCATServer", "TwinCATServer\TwinCATServer.csproj", "{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TensorPyServer", "TensorPyServer\TensorPyServer.pyproj", "{14A2A24D-56EC-4EAC-9BC7-6883CB1E1C15}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronPythonServer", "IronPythonServer\IronPythonServer.csproj", "{D1B1C85E-6D5F-475E-9B72-5DA3370C1754}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroLogServer", "MicroLogServer\MicroLogServer.csproj", "{45EC6E8B-1D8C-4C44-ABB7-F54FF916A6CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixServer", "MatrixServer\MatrixServer.csproj", "{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +37,6 @@ Global
 		{DD4668C4-DBAC-4617-B5D3-F5F01A88BDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD4668C4-DBAC-4617-B5D3-F5F01A88BDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD4668C4-DBAC-4617-B5D3-F5F01A88BDC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F3D0BB19-FDA3-44D4-B2F6-FBC15E3E2EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F3D0BB19-FDA3-44D4-B2F6-FBC15E3E2EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3D0BB19-FDA3-44D4-B2F6-FBC15E3E2EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,16 +49,14 @@ Global
 		{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{137D55C1-F67F-4EDD-9435-92DA2D4C8A57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14A2A24D-56EC-4EAC-9BC7-6883CB1E1C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14A2A24D-56EC-4EAC-9BC7-6883CB1E1C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1B1C85E-6D5F-475E-9B72-5DA3370C1754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1B1C85E-6D5F-475E-9B72-5DA3370C1754}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1B1C85E-6D5F-475E-9B72-5DA3370C1754}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1B1C85E-6D5F-475E-9B72-5DA3370C1754}.Release|Any CPU.Build.0 = Release|Any CPU
 		{45EC6E8B-1D8C-4C44-ABB7-F54FF916A6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45EC6E8B-1D8C-4C44-ABB7-F54FF916A6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45EC6E8B-1D8C-4C44-ABB7-F54FF916A6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45EC6E8B-1D8C-4C44-ABB7-F54FF916A6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

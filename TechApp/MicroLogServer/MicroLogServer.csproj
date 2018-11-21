@@ -73,6 +73,8 @@
     <Compile Include="LogUI\Framework\IRegion.cs" />
     <Compile Include="LogUI\Framework\IScreenspace.cs" />
     <Compile Include="LogUI\Framework\IWorkspace.cs" />
+    <Compile Include="LogUI\Framework\Model\FileEntity.cs" />
+    <Compile Include="LogUI\Framework\Model\LogEntity.cs" />
     <Compile Include="LogUI\Menu\Container\BasicMenuView.xaml.cs">
       <DependentUpon>BasicMenuView.xaml</DependentUpon>
     </Compile>
@@ -98,6 +100,14 @@
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
     <Compile Include="LogUI\Shell\ShellViewModel.cs" />
+    <Compile Include="LogUI\Workspace\Container\ContentView.xaml.cs">
+      <DependentUpon>ContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogUI\Workspace\Container\ContentViewModel.cs" />
+    <Compile Include="LogUI\Workspace\Container\FilterView.xaml.cs">
+      <DependentUpon>FilterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogUI\Workspace\Container\FilterViewModel.cs" />
     <Compile Include="LogUI\Workspace\WorkspaceView.xaml.cs">
       <DependentUpon>WorkspaceView.xaml</DependentUpon>
     </Compile>
@@ -137,7 +147,6 @@
     <Folder Include="LogUI\Framework\Helper\" />
     <Folder Include="LogUI\Prompt\" />
     <Folder Include="LogUI\Screenspace\Container\" />
-    <Folder Include="LogUI\Workspace\Container\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="LogUI\Explorer\ExplorerView.xaml">
@@ -161,6 +170,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LogUI\Shell\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogUI\Workspace\Container\ContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogUI\Workspace\Container\FilterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
