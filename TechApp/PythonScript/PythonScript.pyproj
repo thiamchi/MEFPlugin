@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DDPG_TF2\env.py" />
+    <Compile Include="DDPG_TF2\main.py" />
+    <Compile Include="DDPG_TF2\rl.py" />
     <Compile Include="DDPG_TF\env.py">
       <SubType>Code</SubType>
     </Compile>
