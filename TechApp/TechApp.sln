@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroLogServer", "MicroLogS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixServer", "MatrixServer\MatrixServer.csproj", "{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonScript", "PythonScript\PythonScript.pyproj", "{3480BEF0-EBEE-4160-96AA-C99CEF463934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythonServer", "PythonServer\PythonServer.csproj", "{FB57C6DE-1C9E-4BFC-8A77-10B726CD018F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,12 @@ Global
 		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{647B372D-AED3-4BFE-8AD6-8E7586D3B85D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3480BEF0-EBEE-4160-96AA-C99CEF463934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3480BEF0-EBEE-4160-96AA-C99CEF463934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB57C6DE-1C9E-4BFC-8A77-10B726CD018F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB57C6DE-1C9E-4BFC-8A77-10B726CD018F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB57C6DE-1C9E-4BFC-8A77-10B726CD018F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB57C6DE-1C9E-4BFC-8A77-10B726CD018F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
