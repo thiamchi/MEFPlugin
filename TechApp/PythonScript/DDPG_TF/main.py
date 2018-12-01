@@ -2,12 +2,13 @@
 from env import ArmEnv
 from rl import DDPG
 
-MAX_EPISODES = 500
+MAX_EPISODES = 900
 MAX_EP_STEPS = 200
-ON_TRAIN = True
+ON_TRAIN = False
 
 # set env
 env = ArmEnv()
+env.get_train_state = ON_TRAIN
 s_dim = env.state_dim
 a_dim = env.action_dim
 a_bound = env.action_bound
@@ -45,16 +46,12 @@ def train():
 def eval():
     rl.restore()
     env.render()
-    env.viewer.set_vsync(True)
+    env.viewer.set_vsync(False)
+    s = env.reset()
     while True:
-        s = env.reset()
-        for _ in range(200):
-            env.render()
-            a = rl.choose_action(s)
-            s, r, done = env.step(a)
-            if done:
-                break
-
+        env.render()
+        a = rl.choose_action(s)
+        s, r, done = env.step(a)
 
 if ON_TRAIN:
     train()
