@@ -5,7 +5,7 @@ import random
 
 MAX_EPISODES = 300
 MAX_EP_STEPS = 200
-ON_TRAIN = False
+ON_TRAIN = True
 
 # set env
 env = ArmEnv()
@@ -20,17 +20,19 @@ rl.get_train_state = ON_TRAIN
 
 def train():
     # start training
+    sample_goal = [None]*36
+    for incx in range(6):
+        for incy in range(6):
+            sample_goal[incy*6 + incx] = {'x': (100. + incx*40), 'y': (100. + incy*40), 'l': 40}
+    print(len(sample_goal))
     for i in range(MAX_EPISODES):
-        # supervised reinforced learning with these four coordinate only
-        sample_goal = [{'x': 100., 'y': 100., 'l': 40},
-                       {'x': 100., 'y': 300., 'l': 40},
-                       {'x': 300., 'y': 100., 'l': 40},
-                       {'x': 300., 'y': 300., 'l': 40}]
-        sample_goal = random.sample(sample_goal,4);
+        sample_goal = random.sample(sample_goal,len(sample_goal));
+        goal_num = 0
         for goal in sample_goal:
             env.goal = goal
             s = env.reset()
             ep_r = 0.
+            goal_num += 1
             for j in range(MAX_EP_STEPS):
                 env.render()
 
@@ -47,7 +49,7 @@ def train():
 
                 s = s_
                 if done or j == MAX_EP_STEPS-1:
-                    print('Ep: %i | %s | ep_r: %.1f | steps: %i' % (i, '---' if not done else 'done', ep_r, j))
+                    print('Ep: %i | Goal: %i| %s | ep_r: %.1f | steps: %i' % (i, goal_num, '---' if not done else 'done', ep_r, j))
                     break
     rl.save()
 
