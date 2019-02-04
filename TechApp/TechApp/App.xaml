@@ -1,7 +1,7 @@
 ﻿<Application x:Class="TechApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:TechApp.Shell">
+             xmlns:local="clr-namespace:TechApp">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

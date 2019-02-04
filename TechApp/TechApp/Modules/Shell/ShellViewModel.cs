@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-//MEF
 using System.ComponentModel.Composition;
-
-//Caliburn
 using Caliburn.Micro;
-
-using TechApp.Screens;
+using TechApp.Modules.Screens;
 using TechApp.Framework;
 
-namespace TechApp.Shell
+namespace TechApp.Modules.Shell
 {
     [Export(typeof(IShell))]
     public class ShellViewModel : Conductor<IScreenSpace>.Collection.OneActive, IShell

@@ -16,10 +16,14 @@ namespace PluginContract
         SampleSpace,
         SampleMatrix,
 
+        //For Dlls
         MathServer,
         LearningServer,
         TwinCATServer,
         MicroLogServer,
+
+        //For Local
+        LoggerTestView,
     }
 
     public interface IPlugin

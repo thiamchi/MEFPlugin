@@ -49,6 +49,9 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="MathNet.Numerics, Version=4.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MathNet.Numerics.4.5.1\lib\net40\MathNet.Numerics.dll</HintPath>
     </Reference>
@@ -109,45 +112,55 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Explorer\MenuBarView.xaml.cs">
-      <DependentUpon>MenuBarView.xaml</DependentUpon>
+    <Compile Include="Framework\Converters\TrueToLimeGreenConverter.cs" />
+    <Compile Include="Modules\MainMenu\IMenu.cs" />
+    <Compile Include="Modules\MainMenu\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Explorer\MenuBarViewModel.cs" />
+    <Compile Include="Modules\MainMenu\MenuViewModel.cs" />
     <Compile Include="Framework\GlobalConst.cs" />
     <Compile Include="Framework\IExplorer.cs" />
     <Compile Include="Framework\IRegion.cs" />
     <Compile Include="Framework\IScreenSpace.cs" />
-    <Compile Include="Screens\AlphaView.xaml.cs">
+    <Compile Include="Modules\SampleDocument\LoggerTestView.xaml.cs">
+      <DependentUpon>LoggerTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SampleDocument\LoggerTestViewModel.cs" />
+    <Compile Include="Modules\Screens\AlphaView.xaml.cs">
       <DependentUpon>AlphaView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\AlphaViewModel.cs" />
-    <Compile Include="Shell\AppBootStrapper.cs" />
-    <Compile Include="Shell\IShell.cs" />
-    <Compile Include="Shell\ShellView.xaml.cs">
+    <Compile Include="Modules\Screens\AlphaViewModel.cs" />
+    <Compile Include="AppBootStrapper.cs" />
+    <Compile Include="Modules\Shell\IShell.cs" />
+    <Compile Include="Modules\Shell\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Shell\ShellViewModel.cs" />
+    <Compile Include="Modules\Shell\ShellViewModel.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Workspace\GenericWorkspaceView.xaml.cs">
+    <Compile Include="Modules\Workspace\GenericWorkspaceView.xaml.cs">
       <DependentUpon>GenericWorkspaceView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Workspace\GenericWorkspaceViewModel.cs" />
-    <Page Include="Explorer\MenuBarView.xaml">
+    <Compile Include="Modules\Workspace\GenericWorkspaceViewModel.cs" />
+    <Page Include="Modules\MainMenu\MenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\AlphaView.xaml">
+    <Page Include="Modules\SampleDocument\LoggerTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Shell\ShellView.xaml">
+    <Page Include="Modules\Screens\AlphaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Workspace\GenericWorkspaceView.xaml">
+    <Page Include="Modules\Shell\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Workspace\GenericWorkspaceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,6 +183,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="log4net.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -186,9 +200,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Framework\Plugins\" />
-    <Folder Include="Screens\Interface\" />
-    <Folder Include="Screens\Model\" />
+    <Folder Include="Common\AvalonDock\" />
+    <Folder Include="Modules\Screens\Interface\" />
+    <Folder Include="Modules\Screens\Model\" />
+    <Folder Include="Modules\SplashScreen\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

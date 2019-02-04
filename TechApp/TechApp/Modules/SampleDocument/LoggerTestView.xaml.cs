@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TechApp.Shell
+namespace TechApp.Modules.SampleDocument
 {
     /// <summary>
-    /// Interaction logic for ShellView.xaml
+    /// Interaction logic for LoggerTestView.xaml
     /// </summary>
-    public partial class ShellView : UserControl
+    public partial class LoggerTestView : UserControl
     {
-        public ShellView()
+        public LoggerTestView()
         {
             InitializeComponent();
         }

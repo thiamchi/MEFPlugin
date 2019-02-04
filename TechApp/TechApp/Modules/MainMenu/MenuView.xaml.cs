@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TechApp.Explorer
+namespace TechApp.Modules.MainMenu
 {
     /// <summary>
     /// Interaction logic for MenuBarView.xaml
     /// </summary>
-    public partial class MenuBarView : UserControl
+    public partial class MenuView : UserControl
     {
-        public MenuBarView()
+        public MenuView()
         {
             InitializeComponent();
         }

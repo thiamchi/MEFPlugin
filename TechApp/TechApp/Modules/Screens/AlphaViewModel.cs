@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechApp.Framework;
 
-namespace TechApp.Screens
+namespace TechApp.Modules.Screens
 {
     [Export(typeof(IScreenSpace))]
     public class AlphaViewModel : Conductor<IRegion>.Collection.AllActive, IScreenSpace
@@ -26,7 +26,7 @@ namespace TechApp.Screens
         #region Helper
         public IRegion ToolBar
         {
-            get { return Items.First(x => x.ScreenName == ViewName.MenuBar); }
+            get { return Items.First(x => x.ScreenName == ViewName.MainMenu); }
         }
         
         public IRegion Workspace

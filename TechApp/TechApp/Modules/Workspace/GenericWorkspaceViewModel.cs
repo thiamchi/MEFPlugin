@@ -8,7 +8,7 @@ using TechApp.Framework;
 using Caliburn.Micro;
 using PluginContract;
 
-namespace TechApp.Workspace
+namespace TechApp.Modules.Workspace
 {
     [Export(typeof(IRegion))]
     public class GenericWorkspaceViewModel : Conductor<IPlugin>.Collection.AllActive, IRegion

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TechApp.Screens
+namespace TechApp.Modules.Screens
 {
     /// <summary>
     /// Interaction logic for AlphaView.xaml

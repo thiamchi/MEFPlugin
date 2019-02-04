@@ -10,9 +10,10 @@ namespace TechApp.Framework
     {
         None,
         AlphaView,
+        BravoView,
         
         //IRegion
-        MenuBar,
+        MainMenu,
         GenericWorkspace,
     }
 
