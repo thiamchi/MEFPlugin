@@ -19,7 +19,13 @@ namespace TechApp.Modules.Workspace
             ScreenName = ViewName.GenericWorkspace;
             Items.AddRange(plugins);
         }
-        
+
+        protected override void OnActivate()
+        {
+            base.OnActivate();
+            ActivateItem(Items.First());
+        }
+
         #region Bind to View
         public ViewName ScreenName { get; private set; }
         #endregion

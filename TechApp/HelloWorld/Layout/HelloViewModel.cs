@@ -16,7 +16,7 @@ namespace HelloWorld.Layout
         [ImportingConstructor]
         public HelloViewModel()
         {
-            DisplayName = "Hello";
+            DisplayName = "Hello World";
             PluginName = PluginName.Hello;
         }
         

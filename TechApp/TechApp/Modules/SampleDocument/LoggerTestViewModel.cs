@@ -10,6 +10,10 @@ namespace TechApp.Modules.SampleDocument
     public class LoggerTestViewModel : Screen, IPlugin
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog log1 = log4net.LogManager.GetLogger("Appender1");
+        private static readonly log4net.ILog log2 = log4net.LogManager.GetLogger("Appender2");
+        private static readonly log4net.ILog log4 = log4net.LogManager.GetLogger("Appender4");
+
         private DispatcherTimer tmr1, tmr2, tmr3;
         private int counter;
 
@@ -35,20 +39,25 @@ namespace TechApp.Modules.SampleDocument
 
         public void SingleLogTxt()
         {
-            log.Debug(string.Format("Debug"));
-            Console.WriteLine("Hello");
+            log.Debug("Generic Log");
+            log1.Debug("Debug log");
+            log4.Debug("Debug");
+            log4.Info("Info");
+            log4.Warn("Warn");
+            log4.Error("Error");
+            log4.Fatal("Fatal");
         }
 
         public void SingleLogMSSQL()
         {
-            log.Debug("Debug log");
+            log2.Debug("Debug log");
         }
 
         public void BatchLogTxt()
         {
             for (int i = 0; i < 50; i++)
             {
-                log.Debug("A");
+                log1.Debug("A");
             }
         }
 

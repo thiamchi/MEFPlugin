@@ -10,6 +10,11 @@
             <MenuItem Header="_File">
                 <MenuItem x:Name="RefreshMenu" Header="_Refresh"/>
             </MenuItem>
+
+            <MenuItem Header="_Options">
+                <MenuItem x:Name="Preference" Header="Preference"/>
+            </MenuItem>
+
             <MenuItem Header="Debugger">
                 <MenuItem x:Name="OpenConsoleWindow" Header="Open Console Window..."/>
                 <MenuItem x:Name="CloseConsoleWindow" Header="Close Console Window..."/>

@@ -113,6 +113,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Framework\Converters\TrueToLimeGreenConverter.cs" />
+    <Compile Include="Modules\Dialogue\LogConfigView.xaml.cs">
+      <DependentUpon>LogConfigView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Dialogue\LogConfigViewModel.cs" />
     <Compile Include="Modules\MainMenu\IMenu.cs" />
     <Compile Include="Modules\MainMenu\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
@@ -144,6 +148,10 @@
       <DependentUpon>GenericWorkspaceView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modules\Workspace\GenericWorkspaceViewModel.cs" />
+    <Page Include="Modules\Dialogue\LogConfigView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Modules\MainMenu\MenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -183,7 +191,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="log4net.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -4,18 +4,16 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TechApp.Framework;
-using Caliburn.Micro;
-using System.ComponentModel.Composition.Hosting;
-using System.IO;
-using System.Reflection;
 using System.Runtime.InteropServices;
+using Caliburn.Micro;
+using TechApp.Framework;
+using TechApp.Modules.Dialogue;
 using PluginContract;
 
 namespace TechApp.Modules.MainMenu
 {
     [Export(typeof(IRegion))]
-    public class MenuViewModel: Screen, IRegion
+    public class MenuViewModel : Screen, IRegion
     {
         [DllImport("kernel32.dll", SetLastError = true, CallingConvention = CallingConvention.Winapi)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -34,14 +32,22 @@ namespace TechApp.Modules.MainMenu
         public const int SW_HIDE = 0;
         public const int SW_SHOW = 5;
 
+        private readonly IWindowManager m_windowManager;
+
         [ImportingConstructor]
-        public MenuViewModel()
+        public MenuViewModel(IWindowManager windowManager)
         {
+            m_windowManager = windowManager;
             ScreenName = ViewName.MainMenu;
         }
 
         [ImportMany(typeof(IPlugin), AllowRecomposition = true)]
         public IEnumerable<Lazy<IPlugin, IPluginMetaData>> Plugins;
+
+        public void Preference()
+        {
+            m_windowManager.ShowWindow(new LogConfigViewModel());
+        }
 
         public void RefreshMenu()
         {

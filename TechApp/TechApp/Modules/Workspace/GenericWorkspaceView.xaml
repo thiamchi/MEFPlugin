@@ -16,7 +16,7 @@
             </TabControl.ContentTemplate>
             <TabControl.ItemContainerStyle>
                 <Style TargetType="TabItem">
-                    <Setter Property="Header" Value="{Binding PluginName}"/>
+                    <Setter Property="Header" Value="{Binding DisplayName}"/>
                 </Style>
             </TabControl.ItemContainerStyle>
         </TabControl>
