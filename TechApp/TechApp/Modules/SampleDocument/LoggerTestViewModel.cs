@@ -10,9 +10,9 @@ namespace TechApp.Modules.SampleDocument
     public class LoggerTestViewModel : Screen, IPlugin
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private static readonly log4net.ILog log1 = log4net.LogManager.GetLogger("Appender1");
-        private static readonly log4net.ILog log2 = log4net.LogManager.GetLogger("Appender2");
-        private static readonly log4net.ILog log4 = log4net.LogManager.GetLogger("Appender4");
+        private static readonly log4net.ILog log1 = log4net.LogManager.GetLogger("Logger1");
+        private static readonly log4net.ILog log2 = log4net.LogManager.GetLogger("Logger2");
+        private static readonly log4net.ILog log4 = log4net.LogManager.GetLogger("Logger4");
 
         private DispatcherTimer tmr1, tmr2, tmr3;
         private int counter;
@@ -39,13 +39,7 @@ namespace TechApp.Modules.SampleDocument
 
         public void SingleLogTxt()
         {
-            log.Debug("Generic Log");
             log1.Debug("Debug log");
-            log4.Debug("Debug");
-            log4.Info("Info");
-            log4.Warn("Warn");
-            log4.Error("Error");
-            log4.Fatal("Fatal");
         }
 
         public void SingleLogMSSQL()
@@ -59,6 +53,21 @@ namespace TechApp.Modules.SampleDocument
             {
                 log1.Debug("A");
             }
+        }
+
+        public void TestButton()
+        {
+            log.Debug("log Debug");
+            log.Info("log Info");
+            log.Warn("log Warn");
+            log.Error("log Error");
+            log.Fatal("log Fatal");
+
+            log4.Debug("log4 Debug");
+            log4.Info("log4 Info");
+            log4.Warn("log4 Warn");
+            log4.Error("log4 Error");
+            log4.Fatal("log4 Fatal");
         }
 
         private void tmr1_Tick(object sender, EventArgs e)

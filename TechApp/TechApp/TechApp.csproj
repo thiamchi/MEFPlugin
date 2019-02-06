@@ -112,6 +112,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Framework\Converters\EnumToStringConverter.cs" />
     <Compile Include="Framework\Converters\TrueToLimeGreenConverter.cs" />
     <Compile Include="Modules\Dialogue\LogConfigView.xaml.cs">
       <DependentUpon>LogConfigView.xaml</DependentUpon>
@@ -198,7 +199,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PluginContract\PluginContract.csproj">

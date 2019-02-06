@@ -4,9 +4,50 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TechApp.Modules.Dialogue"
+             xmlns:Converters="clr-namespace:TechApp.Framework.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid MinHeight="400" MinWidth="600" Background="Lime">
-            
+    <UserControl.Resources>
+        <Converters:EnumToStringConverter x:Key="enumToString"/>
+    </UserControl.Resources>
+    <Grid MinHeight="400" MinWidth="600" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--<StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" MinWidth="200">
+            <TextBox x:Name="SearchCommand"/>
+            <TreeView VerticalAlignment="Stretch" VerticalContentAlignment="Stretch"></TreeView>
+        </StackPanel>-->
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Log Level (root)" Padding="5"/>
+                <ComboBox Grid.Row="0" Grid.Column="1" ItemsSource="{Binding LogLevels}" DisplayMemberPath="Level" SelectedItem="{Binding SelectedRootLogLevel}" Padding="5"/>
+                
+                <Label Grid.Row="1" Grid.Column="0" Content="Log Level (Logger4)" Padding="5"/>
+                <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding LogLevels}" DisplayMemberPath="Level" SelectedItem="{Binding SelectedLog4LogLevel}" Padding="5"/>
+
+            </Grid>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="SubmitOK" Content="OK" Width="100" Height="20" Margin="5"/>
+            <Button x:Name="SubmitCancel" Content="Cancel" Width="100" Height="20" Margin="5"/> 
+        </StackPanel>
     </Grid>
 </UserControl>

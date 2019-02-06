@@ -25,6 +25,7 @@
                 <Button x:Name="SingleLogTxt" Content="Single Log to .txt" Margin="2" Padding="2"/>
                 <Button x:Name="SingleLogMSSQL" Content="Single Log to MSSQL" Margin="2" Padding="2"/>
                 <Button x:Name="BatchLogTxt" Content="Batch Log to .txt" Margin="2" Padding="2"/>
+                <Button x:Name="TestButton" Content="Test Button" Margin="2" Padding="2"/>
             </StackPanel>
         </GroupBox>
 
